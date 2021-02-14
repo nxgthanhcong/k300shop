@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/grid.css">
+    <link rel="stylesheet" href="./asset/css/mylib.css">
+    <link rel="stylesheet" href="./asset/css/app.css">
+    <link rel="stylesheet" href="./asset/css/reponsive.css">
+    <link rel="stylesheet" href="./asset/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <div class="header-top nonedisplay-both">
+                <div class="logo">
+                    <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="" class="logo__img">
+                </div>
+                <ul class="personal-list">
+                    <li class="personal-list__item personal-list__item-search show-hiden-content">
+                        <a href="" class="personal-list__link underline_effect">Search <i class="personal-list__icon personal-list__icon--search ti-search"></i></a>
+                        <div class="search-content">
+                            <input type="text" class="search-content__text">
+                            <i class="search-content__icon ti-search"></i>
+                        </div>
+                    </li>
+                    <li class="personal-list__item personal-list__item-account show-hiden-content">
+                        <!-- <a href="" class="personal-list__link underline_effect">
+                            Account <i class="personal-list__icon personal-list__icon--account-unlogin ti-user"></i>
+                        </a>
+                        <ul class="account-content hiden-content">
+                            <li class="account-unlogin__item">
+                                <a href="" class="account-unlogin__link">SIGN UP</a>
+                            </li>
+                            <li class="account-unlogin__item">
+                                <a href="" class="account-unlogin__link">LOGIN</a>
+                            </li>
+                        </ul> -->
+                        <a href="" class="personal-list__link">
+                            <div class="account-avatar" style="background-image: url(./asset/img/avt.png);"></div>
+                            Ng Thanh Cong
+                        </a>
+                        <ul class="account-content hiden-content">
+                            <li class="account-logined__item">
+                                <a href="" class="account-logined__link underline_effect">ACCOUNT SETTING</a>
+                            </li>
+                            <li class="account-logined__item">
+                                <a href="" class="account-logined__link underline_effect">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- <li class="personal-list__item personal-list__item--cart-empty  show-hiden-content">
+                        <a href="" class="personal-list__link underline_effect">Cart <i class="personal-list__icon personal-list__icon--cart-empty ti-shopping-cart"></i></a>
+                        <div class="cart-empty">
+                            <img src="data:image/png;base64,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" alt="" class="cart-empty__img">
+                            <h3 class="cart-empty__text">Cart is empty</h3>
+                        </div>
+                        
+                    </li> -->
+                    <li class="personal-list__item personal-list__item--cart-full  show-hiden-content">
+                        <a href="" class="personal-list__link underline_effect">Cart <i class="personal-list__icon personal-list__icon--cart-empty ti-shopping-cart-full"></i></a>
+                        
+                        <div class="cart-full">
+                            <div class="cart-info">
+                                <ul class="cart-list">
+                                    <li class="cart-item">
+                                        <img src="https://product.hstatic.net/1000042622/product/9y5a6757_7218429a06a84fe9b8a584ec42aab6a5_small.jpg" alt="" class="cart-item__img">
+                                        <div class="cart-item-text">
+                                            <div class="cart-item__product-info">
+                                                <h3 class="cart-item__name">Skinny Jeans In Mid Wash Blue Jeans In Mid Wash Bluedddddddddddd</h3>
+                                                <span class="cart-item__size-color">30 / Blue</span>
+                                            </div>
+                                            <span class="cart-item__quantity">sl: 1</span>
+                                            <span class="cart-item__price">350.000 vnđ</span>
+                                            <span class="cart-item__delete"><i class="ti-close cart-item__delete-icon"></i></span>
+                                        </div>
+                                    </li>
+                                    <li class="cart-item">
+                                        <img src="https://product.hstatic.net/1000042622/product/9y5a6757_7218429a06a84fe9b8a584ec42aab6a5_small.jpg" alt="" class="cart-item__img">
+                                        <div class="cart-item-text">
+                                            <div class="cart-item__product-info">
+                                                <h3 class="cart-item__name">Skinny Jeans In Mid Wash Blue</h3>
+                                                <span class="cart-item__size-color">30 / Blue</span>
+                                            </div>
+                                            <span class="cart-item__quantity">sl: 1</span>
+                                            <span class="cart-item__price">350.000 vnđ</span>
+                                            <span class="cart-item__delete"><i class="ti-close cart-item__delete-icon"></i></span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="cart__total-price">
+                                <h3 class="cart__total-price-label">Total: </h3>
+                                <span><div class="cart__total-price-number">1.000.000 vnđ</div></span>
+                            </div>
+                            <div class="cart-control">
+                                <button class="btn cart-control__continue-shopping">Continue Shopping</button>
+                                <button class="btn btn--primary cart-control__checkout">Checkout Now</button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-bot nonedisplay-both">
+                <ul class="menu">
+                    <li class="menu__item menu-clothing show-hiden-content">
+                        <a href="" class="menu__link underline_effect">CLOTHING <i class="ti-angle-down menu__link-icon"></i></a>
+                        <ul class="menu-clothing__content hiden-content">
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">T-SHIRTS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">SWEATSHIRTS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">HOODIES</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">SHIRTS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">JACKETS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">TANK TOPS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">JEANS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">PANTS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">SHORTS</a>
+                            </li>
+                            <li class="menu-clothing__content-item">
+                                <a href="" class="menu-clothing__content-link underline_effect">BOXER</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item menu-accessories show-hiden-content">
+                        <a href="" class="menu__link underline_effect">ACCESSORIES <i class="ti-angle-down menu__link-icon"></i></a>
+                        <ul class="menu-accessories__content hiden-content">
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">CAPS & HATS</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">BAGS</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">SOCKS</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">SHOELACES</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">JEWELLERY</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">BELTS</a>
+                            </li>
+                            <li class="menu-accessories__content-item">
+                                <a href="" class="menu-accessories__content-link underline_effect">BUFFHEAD</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">NEW IN</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">SALE</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">ABOUT US</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">STORE SYSTEM</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">SHOP ON INSTAGRAM</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link underline_effect">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mheader">
+                <div class="mheader__content">
+                    <label for="mainsidebar-check" class="mheader__list-icon-wrap">
+                        <i class="ti-list mheader__list-icon">
+                    
+                        </i>
+                    </label>
+                    
+                    <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="" class="mheader__logo">
+                    <div class="mheader__cart">
+                        <!-- <div class="personal-list__item personal-list__item--cart-empty  show-hiden-content">
+                            <a href="" class="personal-list__link underline_effect">Cart <i class="personal-list__icon personal-list__icon--cart-empty ti-shopping-cart"></i></a>
+                            <div class="cart-empty">
+                                <img src="data:image/png;base64,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" alt="" class="cart-empty__img">
+                                <h3 class="cart-empty__text">Cart is empty</h3>
+                            </div>
+                            
+                        </div> -->
+
+
+                        <div class="personal-list__item personal-list__item--cart-full  show-hiden-content">
+                            <a href="" class="personal-list__link underline_effect">Cart <i class="personal-list__icon personal-list__icon--cart-empty ti-shopping-cart-full"></i></a>
+                            
+                            <div class="cart-full">
+                                <div class="cart-info">
+                                    <ul class="cart-list">
+                                        <li class="cart-item">
+                                            <img src="https://product.hstatic.net/1000042622/product/9y5a6757_7218429a06a84fe9b8a584ec42aab6a5_small.jpg" alt="" class="cart-item__img">
+                                            <div class="cart-item-text">
+                                                <div class="cart-item__product-info">
+                                                    <h3 class="cart-item__name">Skinny Jeans In Mid Wash Blue Jeans In Mid Wash Bluedddddddddddd</h3>
+                                                    <span class="cart-item__size-color">30 / Blue</span>
+                                                </div>
+                                                <span class="cart-item__quantity">sl: 1</span>
+                                                <span class="cart-item__price">350.000 vnđ</span>
+                                                <span class="cart-item__delete"><i class="ti-close cart-item__delete-icon"></i></span>
+                                            </div>
+                                        </li>
+                                        <li class="cart-item">
+                                            <img src="https://product.hstatic.net/1000042622/product/9y5a6757_7218429a06a84fe9b8a584ec42aab6a5_small.jpg" alt="" class="cart-item__img">
+                                            <div class="cart-item-text">
+                                                <div class="cart-item__product-info">
+                                                    <h3 class="cart-item__name">Skinny Jeans In Mid Wash Blue</h3>
+                                                    <span class="cart-item__size-color">30 / Blue</span>
+                                                </div>
+                                                <span class="cart-item__quantity">sl: 1</span>
+                                                <span class="cart-item__price">350.000 vnđ</span>
+                                                <span class="cart-item__delete"><i class="ti-close cart-item__delete-icon"></i></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="cart__total-price">
+                                    <h3 class="cart__total-price-label">Total: </h3>
+                                    <span><div class="cart__total-price-number">1.000.000 vnđ</div></span>
+                                </div>
+                                <div class="cart-control">
+                                    <button class="btn cart-control__continue-shopping">Continue Shopping</button>
+                                    <button class="btn btn--primary cart-control__checkout">Checkout Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input hidden type="checkbox" name="" id="mainsidebar-check">
+                <div class="mainsidebar">
+                    <div class="mainsidebar__fixed">
+                        <div class="mainsidebar__logo">
+                            <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="" class="mainsidebar__logo-img">
+                            <label for="mainsidebar-check" class="mheader__list-icon-wrap">
+                                <i class="ti-close mainsidebar__logo-close"></i>
+                            </label>
+                        </div>
+                        <div class="mainsidebar__search">
+                            <input type="text" class="mainsidebar__search-input" placeholder="Tìm sản phẩm">
+                            <button class="mainsidebar__search-btn btn--primary">Tìm</button>
+                        </div>
+                    </div>
+                    <div class="mainmenu">
+                        <li class="mainitem">
+                            <label for="clothing-check" class="mainbtn-dropdown">
+                                CLOTHING
+                                <i class="ti-plus"></i>
+                            </label>
+                            <input hidden type="checkbox" name="" id="clothing-check">
+                            <div class="smainmenu">
+                                <a href="" class="smainmenu__item">T-SHIRTS</a>
+                                <a href="" class="smainmenu__item">SWEATSHIRTS</a>
+                                <a href="" class="smainmenu__item">HOODIES</a>
+                                <a href="" class="smainmenu__item">SHIRTS</a>
+                                <a href="" class="smainmenu__item">JACKETS</a>
+                                <a href="" class="smainmenu__item">TANK TOPS</a>
+                                <a href="" class="smainmenu__item">JEANS</a>
+                                <a href="" class="smainmenu__item">PANTS</a>
+                                <a href="" class="smainmenu__item">SHORTS</a>
+                                <a href="" class="smainmenu__item">BOXER</a>
+                            </div>
+                        </li>
+                        <li class="mainitem">
+                            <label for="accessories-check" class="mainbtn-dropdown">
+                                ACCESSORIES
+                                <i class="ti-plus"></i>
+                            </label>
+                            <input hidden type="checkbox" name="" id="accessories-check">
+                            <div class="smainmenu">
+                                <a href="" class="smainmenu__item">CAPS & HATS</a>
+                                <a href="" class="smainmenu__item">BAGS</a>
+                                <a href="" class="smainmenu__item">SOCKS</a>
+                                <a href="" class="smainmenu__item">SHOELACES</a>
+                                <a href="" class="smainmenu__item">JEWELLERY</a>
+                                <a href="" class="smainmenu__item">BELTS</a>
+                                <a href="" class="smainmenu__item">BUFFHEAD</a>
+                            </div>
+                        </li>
+                        <li class="mainitem">
+                            <label for="" class="mainbtn-dropdown">
+                                CLOTHING
+                            </label>
+                        </li>
+                        <li class="mainitem">
+                            <label for="" class="mainbtn-dropdown">
+                                ACESSORIES
+                            </label>
+                        </li>
+                    </div>
+                </div>
+                <label for="mainsidebar-check" class="overlay">
+    
+                </label >
+                
+            </div>
+        </div>
+        <div class="main">
+            <div id="scrolltop"></div>
+            <div class="collection-header">
+                <label for="filter-check" class="collection-header__filter">Bộ lọc <i class="ti-angle-down"></i>
+                    <input hidden type="checkbox" name="" id="filter-check">
+                    <div class="filter">
+                        <div class="filter__header">
+                            <h2 class="filter__header-label">Lọc theo</h2>
+                            <i class="ti-close"></i>
+                        </div>
+                        <div class="menu-filter">
+                            <li class="filter-item">
+                                <label for="protype-check" class="btn-dropdown">Product Type
+                                    <i class="ti-close"></i>
+                                </label>
+                                <input hidden type="checkbox" name="" id="protype-check">
+                                <div class="smenu">
+                                    <a href="" class="smenu__item">Basic</a>
+                                    <a href="" class="smenu__item">Longline</a>
+                                </div>
+                            </li>
+                            <li class="filter-item">
+                                <label for="price-check" class="btn-dropdown">Product Type
+                                    <i class="ti-close"></i>
+                                </label>
+                                <input hidden type="checkbox" name="" id="price-check">
+                                <div class="smenu">
+                                    <a href="" class="smenu__item">Basic</a>
+                                    <a href="" class="smenu__item">Longline</a>
+                                </div>
+                            </li>
+                        </div>
+                    </div>
+                </label>
+                <h1 class="collection-header__label">T-SHIRTS</h1>
+                <div class="collection-header__sort">
+                    <span class="sort__label">Sắp xếp</span>
+                    <label for="sort" class="sort__option">Tùy chọn <i class="ti-angle-down"></i>
+                        <input hidden type="checkbox" name="" id="sort" class="sortcheck">
+                        <ul class="option__list">
+                            <li class="option__item">Tất cả</li>
+                            <li class="option__item">Best seller</li>
+                            <li class="option__item">A-Z</li>
+                            <li class="option__item">Z-A</li>
+                            <li class="option__item">Giá thấp đến cao</li>
+                            <li class="option__item">Giá cao đến thấp</li>
+                            <li class="option__item">Mới nhất</li>
+                            <li class="option__item">Cũ nhất</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+            <div class="collection__list">
+                <div class="grid product__list">
+                    <div class="row">
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                        <div class="col l-3 m-4 c-12">
+                            <div class="product__item">
+                                <a href="" class="product__item-link">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0602_d1ec736cca3c4b54990b48d4569f08c3_master.jpg" alt="" class="product__img product__img--unhover">
+                                    <img src="https://product.hstatic.net/1000042622/product/img_0621_a3f63b26385f4fabb9e2b7e11371a6f1_master.jpg" alt="" class="product__img product__img--hover">
+                                    <h3 class="product__name">Pray For Money T-Shirt In Black</h3>
+                                </a>
+                                <div class="product__code">Product Code: 1022T</div>
+                                <div class="product__price">Price: 300.500 vnđ</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panigation">
+                <ul class="panigation__list">
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link"><i class="ti-angle-double-left"></i></a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link"><i class="ti-angle-left"></i></a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">1</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">2</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">3</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">4</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">....</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link">10</a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link"><i class="ti-angle-right"></i></a>
+                    </li>
+                    <li class="panigation__item btn">
+                        <a href="" class="panigation__link"><i class="ti-angle-double-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="#scrolltop" class="floatscroll">
+            <i class="ti-angle-double-up"></i>
+        </a>
+        <label for="chat" class="floatinstagram chatcheck">
+            <i class="ti-flickr-alt"></i>
+            <input type="checkbox" hidden name="" id="chat" class="chatcheck">
+
+            <div class="chat">
+                <div class="chat-top">
+                    <div class="chat__img" style="background-image: url(https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497);"></div>
+                    <div class="chat-option">
+                        <div class="chat__avatar">
+                            <div class="chat__avatar-img" style="background-image: url(./asset/img/avt.png);"></div>
+                            <i class="ti-arrow-circle-down"></i>
+                        </div>
+                        <div class="chat__more">
+                            <i class="ti-more-alt"></i>
+                        </div>
+                        <label for="chat" class="chat__line">
+                            <i class="ti-layout-line-solid"></i>
+                        </label>
+                    </div>
+                </div>
+                <h1 class="chat__label">Chat với The K300 Shop</h1>
+                <p class="chat__phanhoi">Thường phản hồi trong vòng vài giờ</p>
+                <h3 class="chat__hello">Xin chào mình có thể giúp gì cho bạn không?</h3>
+                <button class="chat__continue">Tiếp tục dưới tên Cong</button>
+            </div>
+            
+        </label>
+        <div class="footer">
+            <div class="grid footer-top">
+                <div class="row">
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-infor">
+                            <a href="" class="footer-infor__img-link"><img src="https://theme.hstatic.net/1000042622/1000531425/14/ft-logo.png" alt="" class="footer-infor__img"></a>
+                            <p class="footer-infor__address">214E Nguyễn Trãi, Phường Nguyễn Cư Trinh, Quận 1, TP.HCM</p>
+                            <a href="tel:0383980693" class="footer-infor__tel"><i class="ti-headphone-alt"></i> 0383 980 693</a>
+                            <a href="mailto:nxgthanhcong@gmail.com" class="footer-infor__mail"><i class="ti-email"></i> nxgthanhcong@gmail.com</a>
+                            <a href="http://online.gov.vn/Home/WebDetails/31148" class="footer-infor__imgbct-link"><img src="https://theme.hstatic.net/1000042622/1000531425/14/logo-bct.png" alt="" class="footer-infor__imgbct"></a>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12 footer-mid">
+                        <div class="row">
+                            <div class="col c-6">
+                                <div class="footer-custom-help">
+                                    <h1 class="footer-custom-help__lable">HỖ TRỢ KHÁCH HÀNG</h1>
+                                    <a href="" class="footer-custom-help__link">Hướng Dẫn Mua Hàng</a>
+                                    <a href="" class="footer-custom-help__link">Hướng Dẫn Đổi Hàng</a>
+                                    <a href="" class="footer-custom-help__link">Câu Hỏi Thường Gặp</a>
+                                    <a href="" class="footer-custom-help__link">Vận Chuyển Giao Hàng</a>  
+                                </div>
+                            </div>
+                            <div class="col c-6">
+                                <div class="footer-service">
+                                    <h1 class="footer-service__lable">THÔNG TIN & DỊCH VỤ</h1>
+                                    <a href="" class="footer-service__link">Về chúng tôi</a>
+                                    <a href="" class="footer-service__link">Tuyển dụng</a>
+                                    <a href="" class="footer-service__link">Chính sách bảo hành</a>
+                                    <a href="" class="footer-service__link">Chính sách bảo mật</a>
+                                    <a href="" class="footer-service__link">Điều khoản và điền kiện</a>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l-4 m-12 c-12">
+                        <div class="footer-contact">
+                            <h1 class="footer-contact__label">FOLLOW US</h1>
+                            <div class="footer-contact__icon-area">
+                                <a href="" class="footer-contact__icon"><i class="ti-facebook"></i></a>
+                                <a href="" class="footer-contact__icon"><i class="ti-instagram"></i></a>
+                            </div>
+                            <h1 class="footer-contact__text-dki">ĐĂNG KÍ NHẬN THÔNG TIN MỚI TỪ THEK300</h1>
+                            <div class="footer-contact__input-area">
+                                <input type="text" placeholder="Your email here" class="footer-contact__input">
+                                <button class="footer-contact__btn-dki btn--primary">Đăng kí</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <h2 class="footer-copyright__label">Copyrights © 2019 by Three Hundred Official. Copy by Ng Thanh Cong </h2>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

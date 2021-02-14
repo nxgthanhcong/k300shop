@@ -1,0 +1,102 @@
+:root {
+    --text-color: #333;
+    --border-color: #dfdcdc;
+    --white-color: #fff;
+}
+/* UNDER LINE 0 TO 100% */
+
+.underline_effect{
+    position: relative;
+    cursor: pointer;
+}
+.underline_effect::after{
+    content: "";
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0px;
+    transition: linear 0.25s;
+}
+.underline_effect:hover::after{
+    width: 100%;
+}
+
+/* SHOW UNDER */
+.show-hiden-content {
+    position: relative;
+}
+
+.hiden-content {
+    position: absolute;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    list-style: none;
+    width: 170px;
+    left: -20px;
+    top: calc(100% + 8px);
+    display: none;
+    z-index: 1;
+    animation: botFadeIn linear 0.25s;
+}
+
+@keyframes botFadeIn {
+    from {
+        transform: translateY(50%);
+        opacity: 0.5;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.show-hiden-content:hover .hiden-content {
+    display: block;
+}
+
+.show-hiden-content::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 4px);
+    left: 0px;
+    width: 100px;
+    height: 20px;
+    background-color: transparent;
+    /* background-color: black; */
+}
+
+/* BTN */
+.btn {
+    height: 40px;
+    min-width: 140px;
+    background-color: transparent;
+    border-radius: 2px;
+    border: 1px solid var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 900;
+    transition: all linear 0.2s;
+    cursor: pointer;
+    color: var(--white-color);
+    outline: none;
+}
+
+.btn:hover {
+    background-color: black;
+    border-color: black;
+    color: var(--white-color);
+}
+
+.btn--primary {
+    height: 40px;
+    min-width: 140px;
+    background-color: black;
+    color: var(--white-color);
+    border-radius: 2px;
+    border: 1px solid black;
+    font-size: 1.4rem;
+    font-weight: 900;
+    transition: all linear 0.2s;
+    cursor: pointer;
+}

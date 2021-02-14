@@ -1,0 +1,119 @@
+/* Tablet + Phone */
+@media (max-width: 1023px) {
+    .mheader {
+        display: block;
+    }
+    .nonedisplay-both {
+        display: none;
+    }
+
+    .footer-infor {
+        text-align: center;
+    }
+
+    .footer-mid {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    .collection-header {
+        flex-wrap: wrap;
+    }
+
+    .collection-header__filter {
+        order: 2;
+    }
+
+    .collection-header__label {
+        width: 100%;
+        order: 1;
+        text-align: center;
+    }
+
+    .collection-header__sort {
+        flex: 1;
+        order: 3;
+        justify-content: flex-end;
+    }
+
+    .filter {
+        width: 100%;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .mainsidebar {
+        width: 400px;
+    }
+}
+
+/* Phone */
+@media (max-width: 739px) {
+    .mheader__logo {
+        width: 100px;
+    }
+
+    .mainsidebar {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .mainsidebar__search {
+        margin-right: 24px;
+    }
+
+    .cart-empty {
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+    }
+    .cart-empty::before {
+        display: none;
+    }
+
+    .cart-full {
+        position: fixed;
+        top: 55px;
+        left: 0;
+        right: 0;
+    }
+
+    .cart-info {
+        width: unset;
+    }
+
+    .cart-full::before {
+        display: none;
+    }
+    
+    .mainsidebar__fixed {
+        width: unset;
+    }
+
+    .mainsidebar__search-btn {
+        min-width: 114px;
+    }
+
+    .highlight-streetwear__shopnow {
+        right: 14px;
+        top: 74%;
+        min-width: 100px;
+        min-height: unset;
+        max-height: 30px;
+    }
+
+    .popular-shoe__description {
+        display: none;
+    }
+
+    .popular-shoe__title {
+        margin-bottom: 16px;
+    }
+
+    .footer-copyright__label {
+        font-size: 1.4rem;
+    }
+}
+
