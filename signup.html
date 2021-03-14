@@ -122,9 +122,9 @@
             cursor: pointer;
         }
 
-        .nonedisplay-class {
+        /* .nonedisplay-class {
             display: none;
-        }
+        } */
 
         .form-message {
             font-size: 12px;
@@ -133,81 +133,83 @@
     </style>
 </head>
 <body>
-    
-    <div class="overlay" onclick="hide()">
-        
-    </div>
-    <div class="formwrap">
-        <div class="close-btn" onclick="hide()">
+    <div class="log-wrap">
+        <div class="overlay" onclick="hide()">
         
         </div>
-        <div class="form-left">
-            <div class="form-left__content">
-                <h3>The K300</h3>
-                <p>Upgrade your fashion now</p>
+        <div class="formwrap">
+            <div class="close-btn" onclick="hide()">
+            
             </div>
-            <img src="https://i.pinimg.com/originals/6b/a6/e2/6ba6e2c31411a00988f952a556509c70.jpg" alt="">
+            <div class="form-left">
+                <div class="form-left__content">
+                    <h3>The K300</h3>
+                    <p>Upgrade your fashion now</p>
+                </div>
+                <img src="https://i.pinimg.com/originals/6b/a6/e2/6ba6e2c31411a00988f952a556509c70.jpg" alt="">
+            </div>
+            <div class="form-right">
+                <form action="" class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <label for="Username">USERNAME</label>
+                        <input rules="required|email" type="text" name="Username" id="Username">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">PASSWORD</label>
+                        <input rules="required" type="password" name="Password" id="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="PasswordConfirm">PASSWORD CONFIRM</label>
+                        <input rules="required" type="password" name="PasswordConfirm" id="PasswordConfirm">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="form-btn">SUGN UP NOW</button>
+                        <p onclick="changeForm()">LOGIN NOW</p>
+                    </div>
+                </form>
+                <form action="" class="login-form nonedisplay-class" id="login-form">
+                    <div class="form-group">
+                        <label for="Username">USERNAME</label>
+                        <input type="text" name="Username" id="Username">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">PASSWORD</label>
+                        <input type="password" name="Password" id="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="form-btn">LOGIN NOW</button>
+                        <p onclick="changeForm()">SIGN UP HERE</p>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="form-right">
-            <form action="" class="signup-form" id="signup-form">
-                <div class="form-group">
-                    <label for="Username">USERNAME</label>
-                    <input rules="required|email" type="text" name="Username" id="Username">
-                    <span class="form-message"></span>
-                </div>
-                <div class="form-group">
-                    <label for="Password">PASSWORD</label>
-                    <input rules="required" type="password" name="Password" id="Password">
-                    <span class="form-message"></span>
-                </div>
-                <div class="form-group">
-                    <label for="PasswordConfirm">PASSWORD CONFIRM</label>
-                    <input rules="required" type="password" name="PasswordConfirm" id="PasswordConfirm">
-                    <span class="form-message"></span>
-                </div>
-                <div class="form-submit">
-                    <button type="submit" class="form-btn">SUGN UP NOW</button>
-                    <p onclick="changeForm()">LOGIN NOW</p>
-                </div>
-            </form>
-            <form action="" class="login-form nonedisplay-class" id="login-form">
-                <div class="form-group">
-                    <label for="Username">USERNAME</label>
-                    <input type="text" name="Username" id="Username">
-                    <span class="form-message"></span>
-                </div>
-                <div class="form-group">
-                    <label for="Password">PASSWORD</label>
-                    <input type="password" name="Password" id="Password">
-                    <span class="form-message"></span>
-                </div>
-                <div class="form-submit">
-                    <button type="submit" class="form-btn">LOGIN NOW</button>
-                    <p onclick="changeForm()">SIGN UP HERE</p>
-                </div>
-            </form>
-        </div>
+        <script>
+            var overlayElement = document.querySelector('.overlay')
+            var formwrapElement = document.querySelector('.formwrap')
+            function hide() {
+                overlayElement.classList.toggle('nonedisplay-class')
+                formwrapElement.classList.toggle('nonedisplay-class')
+            }
+            var signupFormElement = document.querySelector('.signup-form')
+            var loginFormElement = document.querySelector('.login-form')
+    
+            function changeForm() {
+                signupFormElement.classList.toggle('nonedisplay-class')
+                loginFormElement.classList.toggle('nonedisplay-class')
+            }
+    
+            
+        </script>
+        <script src="./asset/js/validator2.js"></script>
+        <script>
+            Validator('#signup-form')
+        </script>
     </div>
-    <script>
-        var overlayElement = document.querySelector('.overlay')
-        var formwrapElement = document.querySelector('.formwrap')
-        function hide() {
-            overlayElement.classList.toggle('nonedisplay-class')
-            formwrapElement.classList.toggle('nonedisplay-class')
-        }
-        var signupFormElement = document.querySelector('.signup-form')
-        var loginFormElement = document.querySelector('.login-form')
-
-        function changeForm() {
-            signupFormElement.classList.toggle('nonedisplay-class')
-            loginFormElement.classList.toggle('nonedisplay-class')
-        }
-
-        
-    </script>
-    <script src="./asset/js/validator2.js"></script>
-    <script>
-        Validator('#signup-form')
-    </script>
+   
 </body>
 </html>
