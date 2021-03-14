@@ -491,8 +491,39 @@
                 <h1 class="chat__label">Chat với The K300 Shop</h1>
                 <p class="chat__phanhoi">Thường phản hồi trong vòng vài giờ</p>
                 <h3 class="chat__hello">Xin chào mình có thể giúp gì cho bạn không?</h3>
-                <button class="chat__continue">Tiếp tục dưới tên Cong</button>
+                <button class="chat__continue" onclick="showChat()">Tiếp tục dưới tên Cong</button>
             </div>
+            <div class="chat-box">
+                <div class="chat-box__header">
+                    <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
+                    <div class="chat-box__header-text">
+                        <p>K300SHOP</p>
+                        <span>Do Messenger cung cấp</span>
+                    </div>
+                    <span class="chat-box__header-icon">...</span>
+                    <span class="chat-box__header-icon">_</span>
+                </div>
+                <div class="chat-box__main">
+        
+                </div>
+                <div class="chat-box__footer">
+                    <span class="file-wrap">
+                        <input hidden type="file" name="file" id="file">
+                        <label for="file">
+                            <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_attach_file_48px-512.png" alt="">
+                        </label>
+                    </span>
+                    <input type="text" name="" id="">
+                    <span>&#10148;</span>
+                </div>
+            </div>
+
+            <script>
+                var chatCountinue = document.querySelector('.chat__continue')
+                function showChat() {
+                    chatCountinue.classList.toggle('display-block')
+                }
+            </script>
             
         </label>
         <div class="footer">
