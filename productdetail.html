@@ -193,7 +193,97 @@
             <div class="detail-top">
                 <div class="grid detail-top__wide">
                     <div class="row">
-                        <div class="col l-4 l-o-6">
+                        <div class="col l-1 small-live-show">
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1098_0c00dbbdbe484863afe38acf549e48d8_master.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1084_6289fef3ee4c466e87b6893b4fdbf0b6_master.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/size_guide_-_3_hundred_d1e315fead004f22a16b2acc6af07595_master.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1085_006a9405754b483b9c6043d27753a5da_master.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1061_2bd2eca9e8074de183d297517e8f93eb_master.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cinque Terre">
+                            </div>
+                            <div class="column">
+                                <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1073_e9b31c8299b54e43a787e0225a3cefd6_master.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
+                            </div>
+                          
+                      
+                              
+                        </div>
+                        <div class="col l-5">
+                           
+                            <div class="container">
+                                
+                                <div class="mySlides2">
+                                  <div class="numbertext"></div>
+                                  <img src="https://product.hstatic.net/1000042622/product/img_1098_0c00dbbdbe484863afe38acf549e48d8_master.jpg" style="width:100%">
+                                </div>
+                                <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/img_1084_6289fef3ee4c466e87b6893b4fdbf0b6_master.jpg" style="width:100%">
+                                  </div>
+                                
+                                <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/size_guide_-_3_hundred_d1e315fead004f22a16b2acc6af07595_master.jpg" style="width:100%">
+                                  </div>
+                                  <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/img_1085_006a9405754b483b9c6043d27753a5da_master.jpg" style="width:100%">
+                                  </div>
+                                  <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/img_1061_2bd2eca9e8074de183d297517e8f93eb_master.jpg" style="width:100%">
+                                  </div>
+                                  <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/img_1073_e9b31c8299b54e43a787e0225a3cefd6_master.jpg" style="width:100%">
+                                  </div>
+                              
+                               
+                                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                <a class="next" onclick="plusSlides(1)">❯</a>
+                            </div>
+                        </div>
+                        <script>
+                            var slideIndex = 1;
+                            showSlides(slideIndex);
+                            
+                            function plusSlides(n) {
+                              showSlides(slideIndex += n);
+                            }
+                            
+                            function currentSlide(n) {
+                              showSlides(slideIndex = n);
+                            }
+                            
+                            function showSlides(n) {
+                              var i;
+                              var slides = document.getElementsByClassName("mySlides2");
+                              var dots = document.getElementsByClassName("demo");
+                            
+                              if (n > slides.length) {slideIndex = 1}
+                              if (n < 1) {slideIndex = slides.length}
+                              for (i = 0; i < slides.length; i++) {
+                                  slides[i].style.display = "none";
+                              }
+                              for (i = 0; i < dots.length; i++) {
+                                  dots[i].className = dots[i].className.replace(" active", "");
+                              }
+                              slides[slideIndex-1].style.display = "block";
+                        
+                            }
+                        </script>
+                        
+                        
+                        <div class="col l-4">
+                         
                             <div class="dproduct">
                                 <h1 class="dproduct__name">
                                     Champion Graphic Big Logo T-Shirt In Black
@@ -230,7 +320,12 @@
                                 <button class="dproduct__add-to-cart btn--primary">Thêm vào giỏ</button>
                                 <button class="dproduct__buy-now btn">Mua ngay</button>
                             </div>
+                          
                         </div>
+                       <div class="col l-2">
+
+                       </div>
+                       
                     </div>
                 </div>
             </div>

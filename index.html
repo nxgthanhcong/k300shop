@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./asset/themify-icons/themify-icons.css">
 </head>
 <body>
-    <div class="app">
+    <div class="app" id=idApp>
         <div class="header">
             <div class="header-top nonedisplay-both">
                 <div class="logo">
@@ -28,18 +28,20 @@
                         </div>
                     </li>
                     <li class="personal-list__item personal-list__item-account show-hiden-content">
-                        <!-- <a href="" class="personal-list__link underline_effect">
+                        <a href="" class="personal-list__link underline_effect">
                             Account <i class="personal-list__icon personal-list__icon--account-unlogin ti-user"></i>
                         </a>
                         <ul class="account-content hiden-content">
                             <li class="account-unlogin__item">
-                                <a href="" class="account-unlogin__link">SIGN UP</a>
+                                <span class="account-unlogin__link">SIGN UP</span>
                             </li>
                             <li class="account-unlogin__item">
-                                <a href="" class="account-unlogin__link">LOGIN</a>
+                                <span  class="account-unlogin__link" >LOGIN</span>
                             </li>
-                        </ul> -->
-                        <a href="" class="personal-list__link">
+                        </ul>
+                       
+                       
+                        <!-- <a href="" class="personal-list__link">
                             <div class="account-avatar" style="background-image: url(./asset/img/avt.png);"></div>
                             Ng Thanh Cong
                         </a>
@@ -50,7 +52,7 @@
                             <li class="account-logined__item">
                                 <a href="" class="account-logined__link underline_effect">LOGOUT</a>
                             </li>
-                        </ul>
+                        </ul> -->
                     </li>
                     <!-- <li class="personal-list__item personal-list__item--cart-empty  show-hiden-content">
                         <a href="" class="personal-list__link underline_effect">Cart <i class="personal-list__icon personal-list__icon--cart-empty ti-shopping-cart"></i></a>
@@ -104,6 +106,7 @@
                     </li>
                 </ul>
             </div>
+            
             <div class="header-bot nonedisplay-both">
                 <ul class="menu">
                     <li class="menu__item menu-clothing show-hiden-content">
@@ -493,36 +496,15 @@
                 <h3 class="chat__hello">Xin chào mình có thể giúp gì cho bạn không?</h3>
                 <button class="chat__continue" onclick="showChat()">Tiếp tục dưới tên Cong</button>
             </div>
-            <div class="chat-box">
-                <div class="chat-box__header">
-                    <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
-                    <div class="chat-box__header-text">
-                        <p>K300SHOP</p>
-                        <span>Do Messenger cung cấp</span>
-                    </div>
-                    <span class="chat-box__header-icon">...</span>
-                    <span class="chat-box__header-icon">_</span>
-                </div>
-                <div class="chat-box__main">
-        
-                </div>
-                <div class="chat-box__footer">
-                    <span class="file-wrap">
-                        <input hidden type="file" name="file" id="file">
-                        <label for="file">
-                            <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_attach_file_48px-512.png" alt="">
-                        </label>
-                    </span>
-                    <input type="text" name="" id="">
-                    <span>&#10148;</span>
-                </div>
-            </div>
-
+         
             <script>
                 var chatCountinue = document.querySelector('.chat__continue')
                 function showChat() {
                     chatCountinue.classList.toggle('display-block')
+                    document.querySelector('.chat-box').style.display = "block";
+                    document.querySelector('.chat').style.display = "none";
                 }
+               
             </script>
             
         </label>
@@ -629,6 +611,140 @@
         setTimeout(showSlides, 4000); // Change image every 2 seconds
         }
 
+    </script>
+    <div class="log-wrap">
+        <div class="overlay_log" onclick="closeLogForm()">
+        
+        </div>
+        <div class="formwrap">
+            <div class="close-btn" onclick="closeLogForm()">
+            
+            </div>
+            <div class="form-left">
+                <div class="form-left__content">
+                    <h3>The K300</h3>
+                    <p>Upgrade your fashion now</p>
+                </div>
+                <img src="https://i.pinimg.com/originals/6b/a6/e2/6ba6e2c31411a00988f952a556509c70.jpg" alt="">
+            </div>
+            <div class="form-right">
+                <form action="" class="signup-form" id="signup-form">
+                    <div class="form-group">
+                        <label for="Username">USERNAME</label>
+                        <input rules="required|email" type="text" name="Username" id="Username">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">PASSWORD</label>
+                        <input rules="required" type="password" name="Password" id="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="PasswordConfirm">PASSWORD CONFIRM</label>
+                        <input rules="required" type="password" name="PasswordConfirm" id="PasswordConfirm">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="form-btn">SUGN UP NOW</button>
+                        <p onclick="changeForm()">LOGIN NOW</p>
+                    </div>
+                </form>
+                <form action="" class="login-form nonedisplay-class" id="login-form">
+                    <div class="form-group">
+                        <label for="Username">USERNAME</label>
+                        <input type="text" name="Username" id="Username">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">PASSWORD</label>
+                        <input type="password" name="Password" id="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-submit">
+                        <button type="submit" class="form-btn">LOGIN NOW</button>
+                        <p onclick="changeForm()">SIGN UP HERE</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+            var overlayElement = document.querySelector('.overlay')
+            var formwrapElement = document.querySelector('.formwrap')
+            var overlay_logElement = document.querySelector('.overlay_log')
+            var appElement=document.querySelector('.app');
+            function hide() {
+                
+                  overlayElement.classList.toggle('nonedisplay-class')
+                  formwrapElement.classList.toggle('nonedisplay-class')
+                  overlay_logElement.classList.toggle('nonedisplay-class')
+            }
+            var signupFormElement = document.querySelector('.signup-form')
+            var loginFormElement = document.querySelector('.login-form')
+
+            function changeForm() {
+                signupFormElement.classList.toggle('nonedisplay-class')
+                loginFormElement.classList.toggle('nonedisplay-class')
+            }
+            
+           
+        </script>
+        <script src="./asset/js/validator2.js"></script>
+        <script>
+            Validator('#signup-form')
+        </script>
+    </div>
+    <script>
+        var elementPush = document.querySelectorAll('.account-unlogin__link')
+
+        var log_wrapElement= document.querySelector(".log-wrap");
+        log_wrapElement.classList.add('nonedisplay-class')
+
+        elementPush[0].onclick = function showLogForm() {
+            log_wrapElement.classList.remove('nonedisplay-class')
+            signupFormElement.classList.remove('nonedisplay-class')
+            loginFormElement.classList.add('nonedisplay-class')
+        }
+        elementPush[1].onclick = function showLogForm() {
+            log_wrapElement.classList.remove('nonedisplay-class')
+            signupFormElement.classList.add('nonedisplay-class')
+            loginFormElement.classList.remove('nonedisplay-class')
+        }
+
+        function closeLogForm() {
+            log_wrapElement.classList.add('nonedisplay-class')
+            
+        }
+
+    </script>
+      <div class="chat-box">
+        <div class="chat-box__header">
+            <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
+            <div class="chat-box__header-text">
+                <p>K300SHOP</p>
+                <span>Do Messenger cung cấp</span>
+            </div>
+            <span class="chat-box__header-icon">...</span>
+            <span class="chat-box__header-icon" onclick="messHiden()">_</span>
+        </div>
+        <div class="chat-box__main">
+
+        </div>
+        <div class="chat-box__footer">
+            <span class="file-wrap">
+                <input hidden type="file" name="file" id="file">
+                <label for="file">
+                    <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_attach_file_48px-512.png" alt="">
+                </label>
+            </span>
+            <input type="text" name="" id="">
+            <span>&#10148;</span>
+        </div>
+    </div>
+    <script>
+        function messHiden(){
+            document.querySelector('.chat-box').style.display='none';
+            
+        }
     </script>
 
 </body>
