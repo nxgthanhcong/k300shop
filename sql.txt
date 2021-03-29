@@ -1,0 +1,83 @@
+union
+group by - count mx min sum avg
+exists
+select columnName into tableNew
+from tableOld
+WHERE IN ?
+INDEX
+
+--SELECT DISTINCT
+--WHERE AND OR NOT
+--ORDER BY
+--WHRE IS NULL, IS NOT NULL
+--UPDATE && WHERE
+--DELETE FROM
+--SELECT TOP 3 * FROM
+--SELECT MIN(COLNAME)
+--SELECT COUNT, AVG, SUM (COLNAME)
+--LIKE: _ = character
+-- LIKE
+	bl% = blerewr
+	h_nt = hint, hont
+	h[oa]t = hot, hat
+	h[^ot]t != hot, hat
+	c[a-c]t = cat, cbt, cct
+--IN
+	The IN operator is a shorthand for multiple OR conditions.
+	WHERE COLUMNNAME IN (VALÚE, VALUE2)
+	WHERE COLUMNNAME IN (SELECT )
+--AS
+	SELECT CONCAT() AS NEWTABLE
+--FROM TABLE1 JOIN + ON
+	INNER - FULL OUTER
+	LEFT - RIGHT
+--SELECT 
+UNION
+SELECT
+
+ORDER BY
+
+--GROUP BY (COUNT(x), AVG, SUM)
+HAVING COUNT(x) > 5
+
+--WEHRE EXIST: BOOL
+
+--WEHRE COLNNAME ANy, all
+
+--SELECT INTO
+	SELECT column1, column2, column3, ...
+	INTO newtable [IN externaldb]
+	FROM oldtable
+	WHERE condition;
+--INSERT INTO SELECT
+	INSERT INTO table2 (column1, column2, column3, ...)
+	SELECT column1, column2, column3, ...
+	FROM table1
+	WHERE condition;
+--CASE
+	SELECT OrderID, Quantity,
+	CASE
+    		WHEN Quantity > 30 THEN 'The quantity is greater than 30'
+    		WHEN Quantity = 30 THEN 'The quantity is 30'
+    		ELSE 'The quantity is under 30'
+	END AS QuantityText
+	FROM OrderDetails;
+--SOME
+
+--BACKUP DB
+	BACKUP DATABASE testDB
+	TO DISK = 'D:\backups\testDB.bak';
+--CREATE TABLE
+	CREATE TABLE TestTable AS
+	SELECT customername, contactname
+	FROM customers;
+--TRUNCATE TABLE
+--DROP COLUMN
+--MODIFY
+	ALTER TABLE Persons
+	MODIFY Age int NOT NULL;
+--PRIMARY = not null + unique
+--Drop UNIQUE CONTRAINT: 
+	DROP CONTRAINT
+--IDENTITY(1,1)
+--CREATE VIEW [VIEWNAME] AS 
