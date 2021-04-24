@@ -23,7 +23,7 @@
             z-index: -1;
         }
 
-        .chat-box {
+        .chat-box-displayed {
             position: fixed;
             bottom: 20px;
             right: 20px;
@@ -35,7 +35,7 @@
             overflow: hidden;
         }
 
-        .chat-box__header {
+        .chat-box-displayed__header {
             display: flex;
             justify-content: space-around;
             align-items: center;
@@ -43,7 +43,7 @@
             padding: 10px;
         }
 
-        .chat-box__header-icon {
+        .chat-box-displayed__header-icon {
             width: 30px;
             height: 30px;
             background-color: #c9c9c9;
@@ -51,32 +51,32 @@
             text-align: center;
             border-radius: 50%;
         }
-        .chat-box__header-icon:last-child {
+        .chat-box-displayed__header-icon:last-child {
             line-height: 13px;
             margin-left: 2px;
         }
 
-        .chat-box__header img {
+        .chat-box-displayed__header img {
             max-width: 80px;
             max-height: 20px;
             margin-right: 10px;
         }
 
-        .chat-box__header-text {
+        .chat-box-displayed__header-text {
             flex: 1;
         }
 
-        .chat-box__header-text p {
+        .chat-box-displayed__header-text p {
             font-size: 1rem;
             color: #333;
         }
 
-        .chat-box__header-text span {
+        .chat-box-displayed__header-text span {
             font-size: 0.8rem;
             color: #c5c5c5;
         }
 
-        .chat-box__footer {
+        .chat-box-displayed__footer {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -87,7 +87,7 @@
             padding: 10px;
         }
 
-        .chat-box__footer input[type = "text"] {
+        .chat-box-displayed__footer input[type = "text"] {
             flex: 1;
             border: none;
             border-bottom: 1px solid;
@@ -98,16 +98,16 @@
             font-size: 1rem;
         }
 
-        .chat-box__footer input[type = "text"]:focus {
+        .chat-box-displayed__footer input[type = "text"]:focus {
             border-color: rgba(0, 0, 0, 0.4);
         }
 
-        .chat-box__footer img {
+        .chat-box-displayed__footer img {
             max-width: 20px;
             cursor: pointer;
         }
 
-        .chat-box__footer span {
+        .chat-box-displayed__footer span {
             cursor: pointer;
         }
         
@@ -117,20 +117,20 @@
     <div class="overlay">
         
     </div>
-    <div class="chat-box">
-        <div class="chat-box__header">
+    <div class="chat-box-displayed">
+        <div class="chat-box-displayed__header">
             <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
-            <div class="chat-box__header-text">
+            <div class="chat-box-displayed__header-text">
                 <p>K300SHOP</p>
                 <span>Do Messenger cung cấp</span>
             </div>
-            <span class="chat-box__header-icon">...</span>
-            <span class="chat-box__header-icon">_</span>
+            <span class="chat-box-displayed__header-icon">...</span>
+            <span class="chat-box-displayed__header-icon">_</span>
         </div>
-        <div class="chat-box__main">
+        <div class="chat-box-displayed__main">
 
         </div>
-        <div class="chat-box__footer">
+        <div class="chat-box-displayed__footer">
             <span class="file-wrap">
                 <input hidden type="file" name="file" id="file">
                 <label for="file">

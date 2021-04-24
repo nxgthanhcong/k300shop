@@ -1,9 +1,0 @@
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\bin\Debug\netcoreapp3.1\Repositories.deps.json
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\bin\Debug\netcoreapp3.1\Repositories.dll
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\bin\Debug\netcoreapp3.1\Repositories.pdb
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.csprojAssemblyReference.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.csproj.CoreCompileInputs.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfoInputs.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.AssemblyInfo.cs
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.dll
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\DataAcess\obj\Debug\netcoreapp3.1\Repositories.pdb

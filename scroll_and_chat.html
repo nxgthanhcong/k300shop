@@ -1,0 +1,87 @@
+<a href="#scrolltop" class="floatscroll">   
+    <i class="ti-angle-double-up"></i>
+</a>
+
+
+<label for="chat" class="floatinstagram chatcheck">
+    <i class="ti-flickr-alt"></i>
+    <input type="checkbox" hidden name="" id="chat" class="chatcheck">
+
+    <div class="chat">
+        <div class="chat-top">
+            <div class="chat__img" style="background-image: url(https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497);"></div>
+            <div class="chat-option">
+                <div class="chat__avatar">
+                    <div class="chat__avatar-img" style="background-image: url(./asset/img/avt.png);"></div>
+                    <i class="ti-arrow-circle-down"></i>
+                </div>
+                <div class="chat__more">
+                    <i class="ti-more-alt"></i>
+                </div>
+                <label for="chat" class="chat__line">
+                    <i class="ti-layout-line-solid"></i>
+                </label>
+            </div>
+        </div>
+        <h1 class="chat__label">Chat với The K300 Shop</h1>
+        <p class="chat__phanhoi">Thường phản hồi trong vòng vài giờ</p>
+        <h3 class="chat__hello">Xin chào mình có thể giúp gì cho bạn không?</h3>
+        <button class="chat__continue" onclick="showChat()">Tiếp tục dưới tên Cong</button>
+    </div>
+    <div class="chat-box">
+        <div class="chat-box__header">
+            <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
+            <div class="chat-box__header-text">
+                <p>K300SHOP</p>
+                <span>Do Messenger cung cấp</span>
+            </div>
+            <span class="chat-box__header-icon">...</span>
+            <span class="chat-box__header-icon">_</span>
+        </div>
+        <div class="chat-box__main">
+
+        </div>
+        <div class="chat-box__footer">
+            <span class="file-wrap">
+                <input hidden type="file" name="file" id="file">
+                <label for="file">
+                    <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_attach_file_48px-512.png" alt="">
+                </label>
+            </span>
+            <input type="text" name="" id="">
+            <span>&#10148;</span>
+        </div>
+    </div>
+
+    <div hidden class="chat-box-displayed">
+        <div class="chat-box-displayed__header">
+            <img src="https://theme.hstatic.net/1000042622/1000531425/14/logo.png?v=497" alt="">
+            <div class="chat-box-displayed__header-text">
+                <p>K300SHOP</p>
+                <span>Do Messenger cung cấp</span>
+            </div>
+            <span class="chat-box-displayed__header-icon">...</span>
+            <span class="chat-box-displayed__header-icon">_</span>
+        </div>
+        <div class="chat-box-displayed__main">
+
+        </div>
+        <div class="chat-box-displayed__footer">
+            <span class="file-wrap">
+                <input hidden type="file" name="file" id="file">
+                <label for="file">
+                    <img src="https://cdn3.iconfinder.com/data/icons/google-material-design-icons/48/ic_attach_file_48px-512.png" alt="">
+                </label>
+            </span>
+            <input type="text" name="" id="">
+            <span>&#10148;</span>
+        </div>
+    </div>
+    <script>
+        var chatCountinue = document.querySelector('.chat__continue')
+        function showChat() {
+            chatCountinue.classList.toggle('display-block')
+        }
+    </script>
+    
+</label>

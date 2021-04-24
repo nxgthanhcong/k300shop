@@ -1,9 +1,0 @@
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\bin\Debug\netcoreapp3.1\UnitOfWorks.deps.json
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\bin\Debug\netcoreapp3.1\UnitOfWorks.dll
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\bin\Debug\netcoreapp3.1\UnitOfWorks.pdb
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.csprojAssemblyReference.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.csproj.CoreCompileInputs.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.AssemblyInfoInputs.cache
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.AssemblyInfo.cs
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.dll
-C:\Users\nxgth\OneDrive\Desktop\STUPID\OUTSCHOOL - Copy\OutSchool_Project\UnitOfWorks\obj\Debug\netcoreapp3.1\UnitOfWorks.pdb
