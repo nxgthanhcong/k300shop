@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\OneDrive\\Máy tính\\new1\\k300shop\\BE\\K300\\K300\\K300.csproj": {}
+    "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\K300\\K300.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\OneDrive\\Máy tính\\new1\\k300shop\\BE\\K300\\K300\\K300.csproj": {
+    "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\K300\\K300.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\OneDrive\\Máy tính\\new1\\k300shop\\BE\\K300\\K300\\K300.csproj",
+        "projectUniqueName": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\K300\\K300.csproj",
         "projectName": "K300",
-        "projectPath": "C:\\Users\\HP\\OneDrive\\Máy tính\\new1\\k300shop\\BE\\K300\\K300\\K300.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\OneDrive\\Máy tính\\new1\\k300shop\\BE\\K300\\K300\\obj\\",
+        "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\K300\\K300.csproj",
+        "packagesPath": "C:\\Users\\nxgth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\K300\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\nxgth\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,8 +22,74 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj",
+        "projectName": "Models",
+        "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj",
+        "packagesPath": "C:\\Users\\nxgth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nxgth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -55,14 +117,144 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\nxgth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nxgth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.78, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\Services.csproj",
+        "packagesPath": "C:\\Users\\nxgth\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nxgth\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Models\\Models.csproj"
+              },
+              "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\nxgth\\OneDrive\\Desktop\\k300shop\\BE\\K300\\Repository\\Repository.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

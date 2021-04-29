@@ -1,0 +1,12 @@
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.csprojAssemblyReference.cache
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfoInputs.cache
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.AssemblyInfo.cs
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\bin\Debug\netcoreapp3.1\Repository.deps.json
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\bin\Debug\netcoreapp3.1\Repository.dll
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\bin\Debug\netcoreapp3.1\Repository.pdb
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CoreCompileInputs.cache
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.csproj.CopyComplete
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.dll
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\Repository\obj\Debug\netcoreapp3.1\Repository.pdb

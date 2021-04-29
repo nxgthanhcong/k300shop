@@ -12,6 +12,14 @@
     <!-- Template CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/components.css">
+
+    <!-- Table  -->
+	  <link rel="stylesheet" type="text/css" href="./assets/css/main.css">
+	  <link rel="stylesheet" type="text/css" href="./assets/css/util.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
 </head>
 <body>
     <div id="app">
@@ -259,6 +267,12 @@
                       <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
                     </ul>
                   </li>
+                  <li class="nav-item dropdown">
+                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Brand</span></a>
+                    <ul class="dropdown-menu">
+                      <li><a class="nav-link" onclick="ShowBrandList();">Brand List</a></li>
+                    </ul>
+                  </li>
                   <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
                   <li class="nav-item dropdown">
                     <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
@@ -393,7 +407,51 @@
                       <h4>Budget vs Sales</h4>
                     </div>
                     <div class="card-body">
-                      <canvas id="myChart" height="158"></canvas>
+                      <!-- <canvas id="myChart" height="158"></canvas> -->
+                      <div class="table100 ver1 m-b-110">
+                        <div class="table100-head">
+                          <table>
+                            <thead>
+                              <tr class="row100 head">
+                                <th class="cell100 column1">Name</th>
+                                <th class="cell100 column5">Description</th>
+                              </tr>
+                            </thead>
+                          </table>
+                        </div>
+              
+                        <div class="table100-body js-pscroll">
+                          <!-- <table>
+                            <tbody>
+                              <tr class="row100 body">
+                                <td class="cell100 column1">Like a butterfly</td>
+                                <td class="cell100 column2">Boxing</td>
+                                <td class="cell100 column3">9:00 AM - 11:00 AM</td>
+                                <td class="cell100 column4">Aaron Chapman</td>
+                                <td class="cell100 column5">10</td>
+                              </tr>
+              
+                            </tbody>
+                          </table> -->
+                          <table class="table-test">
+                            
+                          </table>
+
+                        </div>
+                      </div>
+                      <!-- table js -->
+                      <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+                      <script>
+                        $('.js-pscroll').each(function(){
+                          var ps = new PerfectScrollbar(this);
+
+                          $(window).on('resize', function(){
+                            ps.update();
+                          })
+                        });
+                          
+                        
+                      </script>
                     </div>
                   </div>
                 </div>
@@ -785,19 +843,19 @@
     </div>
 
     <!-- General JS Scripts -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/stisla.js"></script>
-
     
     <!-- Template JS File -->
     <script src="./assets/js/scripts.js"></script>
     <script src="./assets/js/custom.js"></script>
-
+    <script src="./assets/js/app.js"></script>
+    
     <!-- Page Specific JS File -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.1/dist/chart.min.js"></script>
     <script src="./assets/js/page/index.js"></script>
-</body>
+  </body>
 </html>
