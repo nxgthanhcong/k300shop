@@ -22,7 +22,7 @@ namespace Services.Implementions
         {
             try
             {
-                using(IUnitOfWork uow = new UnitOfWork(_connectionString))
+                using(IUnitOfWork<Brand> uow = new UnitOfWork<Brand>(_connectionString))
                 {
                     var result = await uow.BrandRepository.GetAllBrand();
                     uow.Commit();

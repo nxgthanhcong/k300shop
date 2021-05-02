@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Models;
 using Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -13,10 +14,12 @@ namespace K300.Controllers
     public class BrandController : ControllerBase
     {
         private readonly IBrandService _brandService;
+        private readonly IGenericService<Brand> _genericService;
 
-        public BrandController(IBrandService brandService)
+        public BrandController(IBrandService brandService, IGenericService<Brand> genericService)
         {
             _brandService = brandService;
+            _genericService = genericService;
         }
 
         [HttpGet("get-all-brand")]
@@ -32,6 +35,23 @@ namespace K300.Controllers
                 return Ok(result);
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpGet("generic-get-all")]
+        public async Task<IActionResult> GetAll()
+        {
+            try
+            {
+                var result = await _genericService.GetAll();
+                if (result == null || !result.Any())
+                {
+                    return null;
+                }
+                return Ok(result.FirstOrDefault().GetType().Name);
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

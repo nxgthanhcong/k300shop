@@ -9,12 +9,13 @@ using System.Text;
 
 namespace Repository
 {
-    public class UnitOfWork : IUnitOfWork
+    public class UnitOfWork<T> : IUnitOfWork<T>
     {
         private IDbTransaction _dbTransaction;
         private IDbConnection _dbConnection;
         private bool _disposed;
         private IBrandRepository _brandRepository;
+        private IGenericRepository<T> _genericRepository;
 
         public UnitOfWork(string connectionString)
         {
@@ -32,6 +33,17 @@ namespace Repository
                     _brandRepository = new BrandRepository(_dbTransaction);
                 }
                 return _brandRepository;
+            }
+        }
+        public IGenericRepository<T> GenericRepository
+        {
+            get
+            {
+                if (_genericRepository == null)
+                {
+                    _genericRepository = new GenericRepository<T>(_dbTransaction);
+                }
+                return _genericRepository;
             }
         }
         private void ResetRepositories()

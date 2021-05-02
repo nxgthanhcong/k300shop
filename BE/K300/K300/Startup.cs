@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Models.BaseModel;
+using Nest;
 using Services.Implementions;
 using Services.Interfaces;
 using System;
@@ -31,6 +32,7 @@ namespace K300
         {
             services.AddControllers();
             services.AddScoped<IBrandService, BrandService>();
+            services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -50,6 +52,8 @@ namespace K300
                                .AllowAnyMethod();
                     });
             });
+            services.AddElastichSearch(Configuration);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +82,17 @@ namespace K300
             {
                 endpoints.MapControllers();
             });
+        }
+    }
+    public static class ElasticsearchExtensions
+    {
+        public static void AddElastichSearch(this IServiceCollection services, IConfiguration configuration)
+        {
+            var url = configuration["elasticsearch:url"];
+            var defaultIndex = configuration["elasticsearch:index"];
+            var setting = new ConnectionSettings(new Uri(url)).DefaultIndex(defaultIndex);
+            var client = new ElasticClient(setting);
+            services.AddSingleton<IElasticClient>(client);
         }
     }
 }

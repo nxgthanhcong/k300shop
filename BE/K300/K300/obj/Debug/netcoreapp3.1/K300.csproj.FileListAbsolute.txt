@@ -39,3 +39,5 @@ C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Sw
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\obj\Debug\netcoreapp3.1\K300.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Nest.dll
