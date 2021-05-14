@@ -9,7 +9,7 @@ using System.Text;
 
 namespace Repository
 {
-    public class UnitOfWork<T> : IUnitOfWork<T>
+    public class UnitOfWork<T> : IUnitOfWork<T> where T : class
     {
         private IDbTransaction _dbTransaction;
         private IDbConnection _dbConnection;
@@ -23,17 +23,6 @@ namespace Repository
             _dbConnection.Open();
             _dbTransaction = _dbConnection.BeginTransaction();
             _disposed = false;
-        }
-        public IBrandRepository BrandRepository
-        {
-            get
-            {
-                if(_brandRepository == null)
-                {
-                    _brandRepository = new BrandRepository(_dbTransaction);
-                }
-                return _brandRepository;
-            }
         }
         public IGenericRepository<T> GenericRepository
         {

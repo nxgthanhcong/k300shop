@@ -1,8 +1,10 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Models;
 using Repository;
 using Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +26,22 @@ namespace Services.Implementions
                 using (IUnitOfWork<T> uow = new UnitOfWork<T>(_connectionString))
                 {
                     var result = await uow.GenericRepository.GetAll();
+                    uow.Commit();
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<int> UpdateBrand(Brand brand)
+        {
+            try
+            {
+                using (IUnitOfWork<T> uow = new UnitOfWork<T>(_connectionString))
+                {
+                    var result = await uow.GenericRepository.UpdateBrand(brand);
                     uow.Commit();
                     return result;
                 }

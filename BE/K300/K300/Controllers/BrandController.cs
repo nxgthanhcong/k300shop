@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ultilities.Interfaces;
 
 namespace K300.Controllers
 {
@@ -13,13 +14,18 @@ namespace K300.Controllers
     [ApiController]
     public class BrandController : ControllerBase
     {
-        private readonly IBrandService _brandService;
-        private readonly IGenericService<Brand> _genericService;
+        private readonly IGenericService<Brand> _brandService;
+        private readonly IRedisCacheHelper _redisCacheHelper;
+        private readonly ISendMailHelper _sendMailHelper;
 
-        public BrandController(IBrandService brandService, IGenericService<Brand> genericService)
+        public BrandController(
+            IGenericService<Brand> brandService,
+            IRedisCacheHelper redisCacheHelper,
+            ISendMailHelper sendMailHelper)
         {
             _brandService = brandService;
-            _genericService = genericService;
+            _redisCacheHelper = redisCacheHelper;
+            _sendMailHelper = sendMailHelper;
         }
 
         [HttpGet("get-all-brand")]
@@ -27,11 +33,23 @@ namespace K300.Controllers
         {
             try
             {
-                var result = await _brandService.GetAllBrand();
+                //check data cache
+                string key = $"GetAllBrand_{DateTime.Now.Date}";
+                //var dataCache = await _redisCacheHelper.GetAsync<IEnumerable<Brand>>(key);
+                //if (dataCache != null)
+                //{
+                //    return Ok(dataCache);
+                //}
+                //if no data cache > go query database
+                var result = await _brandService.GetAll();
                 if(result == null || !result.Any())
                 {
                     return null;
                 }
+                //if has data > save to cache
+                //await _redisCacheHelper.SetAsync(key, result, TimeSpan.FromDays(1));
+                //return
+                //await _sendMailHelper.SendMail();
                 return Ok(result);
             }
             catch(Exception ex)
@@ -39,17 +57,14 @@ namespace K300.Controllers
                 throw ex;
             }
         }
-        [HttpGet("generic-get-all")]
-        public async Task<IActionResult> GetAll()
+        
+        [HttpPost("update-brand")]
+        public async Task<IActionResult> UpdateBrand(Brand brand)
         {
             try
             {
-                var result = await _genericService.GetAll();
-                if (result == null || !result.Any())
-                {
-                    return null;
-                }
-                return Ok(result.FirstOrDefault().GetType().Name);
+                var result = await _brandService.UpdateBrand(brand);
+                return Ok(result);
             }
             catch (Exception ex)
             {

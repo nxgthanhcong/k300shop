@@ -1,19 +1,26 @@
+using K300.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Models.BaseModel;
 using Nest;
+using Quartz;
+using Quartz.Impl;
 using Services.Implementions;
 using Services.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Threading.Tasks;
+using Ultilities.Implementions;
+using Ultilities.Interfaces;
 
 namespace K300
 {
@@ -31,7 +38,6 @@ namespace K300
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IBrandService, BrandService>();
             services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
             services.AddSwaggerGen(c =>
             {
@@ -53,7 +59,29 @@ namespace K300
                     });
             });
             services.AddElastichSearch(Configuration);
+            services.AddSingleton<IScheduler>(ConfigureQuartz(services));
 
+            services.AddDistributedMemoryCache();
+            services.AddDistributedRedisCache(option =>
+            {
+                option.Configuration = Configuration["RedisSetting:RedisConfiguration"];
+                option.InstanceName = Configuration["RedisSetting:RedisInstanceName"];
+            });
+            services.AddScoped<IRedisCacheHelper, RedisCacheHelper>();
+            services.AddScoped<ISendMailHelper, SendMailHelper>();
+            services.AddMemoryCache();
+        }
+        public IScheduler ConfigureQuartz(IServiceCollection services)
+        {
+            NameValueCollection props = new NameValueCollection()
+            {
+                ["quartz.serializer.type"] = "binary"
+            };
+            StdSchedulerFactory factory = new StdSchedulerFactory(props);
+            var scheduler = factory.GetScheduler().Result;
+            new JobScheduler(scheduler).Start();
+            //scheduler.Start().Wait();
+            return scheduler;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
