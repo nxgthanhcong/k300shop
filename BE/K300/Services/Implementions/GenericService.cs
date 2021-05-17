@@ -51,5 +51,21 @@ namespace Services.Implementions
                 throw ex;
             }
         }
+        public async Task<int> AddBrand(Brand brand)
+        {
+            try
+            {
+                using (IUnitOfWork<T> uow = new UnitOfWork<T>(_connectionString))
+                {
+                    var result = await uow.GenericRepository.AddBrand(brand);
+                    uow.Commit();
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

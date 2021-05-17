@@ -1,6 +1,8 @@
+using K300.Hubs;
 using K300.Jobs;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Caching.Memory;
@@ -69,7 +71,9 @@ namespace K300
             });
             services.AddScoped<IRedisCacheHelper, RedisCacheHelper>();
             services.AddScoped<ISendMailHelper, SendMailHelper>();
+            services.AddScoped<IElastichsearchHelper, ElastichsearchHelper>();
             services.AddMemoryCache();
+            services.AddSignalR();
         }
         public IScheduler ConfigureQuartz(IServiceCollection services)
         {
@@ -109,6 +113,12 @@ namespace K300
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<QuantityHub>("/quantityHub", options => 
+                {
+                    options.Transports =
+                        HttpTransportType.WebSockets |
+                        HttpTransportType.LongPolling;
+                });
             });
         }
     }

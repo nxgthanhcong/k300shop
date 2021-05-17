@@ -49,5 +49,21 @@ namespace Repository.Implementions
                 throw ex;
             }
         }
+        public async Task<int> AddBrand(Brand brand)
+        {
+            try
+            {
+                var result = await ExecuteAsync("[sp_AddBrand]", new
+                {
+                    @description = brand.Description,
+                    @name = brand.Name,
+                });
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

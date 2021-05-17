@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Ultilities.Implementions;
 using Ultilities.Interfaces;
 
 namespace K300.Controllers
@@ -17,13 +18,16 @@ namespace K300.Controllers
         private readonly IGenericService<Brand> _brandService;
         private readonly IRedisCacheHelper _redisCacheHelper;
         private readonly ISendMailHelper _sendMailHelper;
+        private readonly IElastichsearchHelper _elastichsearchHelper;
 
         public BrandController(
             IGenericService<Brand> brandService,
             IRedisCacheHelper redisCacheHelper,
-            ISendMailHelper sendMailHelper)
+            ISendMailHelper sendMailHelper,
+            IElastichsearchHelper elastichsearchHelper)
         {
             _brandService = brandService;
+            _elastichsearchHelper = elastichsearchHelper;
             _redisCacheHelper = redisCacheHelper;
             _sendMailHelper = sendMailHelper;
         }
@@ -34,7 +38,7 @@ namespace K300.Controllers
             try
             {
                 //check data cache
-                string key = $"GetAllBrand_{DateTime.Now.Date}";
+                //string key = $"GetAllBrand_{DateTime.Now.Date}_";
                 //var dataCache = await _redisCacheHelper.GetAsync<IEnumerable<Brand>>(key);
                 //if (dataCache != null)
                 //{
@@ -48,8 +52,11 @@ namespace K300.Controllers
                 }
                 //if has data > save to cache
                 //await _redisCacheHelper.SetAsync(key, result, TimeSpan.FromDays(1));
-                //return
+
                 //await _sendMailHelper.SendMail();
+
+                Exception ex = new Exception("test loi");
+                _elastichsearchHelper.UpErrorToElasticSeearch(ex, new { });
                 return Ok(result);
             }
             catch(Exception ex)
@@ -64,6 +71,19 @@ namespace K300.Controllers
             try
             {
                 var result = await _brandService.UpdateBrand(brand);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        [HttpPost("add-brand")]
+        public async Task<IActionResult> AddBrand(Brand brand)
+        {
+            try
+            {
+                var result = await _brandService.AddBrand(brand);
                 return Ok(result);
             }
             catch (Exception ex)

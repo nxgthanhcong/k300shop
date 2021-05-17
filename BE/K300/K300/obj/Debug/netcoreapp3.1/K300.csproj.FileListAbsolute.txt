@@ -72,3 +72,4 @@ C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\ru
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Ultilities.dll
 C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\Ultilities.pdb
+C:\Users\nxgth\OneDrive\Desktop\k300shop\BE\K300\K300\bin\Debug\netcoreapp3.1\libman.json

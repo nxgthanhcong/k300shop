@@ -9,5 +9,6 @@ namespace Services.Interfaces
     public interface IBrandService
     {
         Task<IEnumerable<Brand>> GetAllBrand();
+        Task<int> AddBrand();
     }
 }

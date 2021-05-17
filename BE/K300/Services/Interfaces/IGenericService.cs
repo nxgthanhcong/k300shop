@@ -11,5 +11,6 @@ namespace Services.Interfaces
     {
         Task<IEnumerable<T>> GetAll();
         Task<int> UpdateBrand(Brand brand);
+        Task<int> AddBrand(Brand brand);
     }
 }
