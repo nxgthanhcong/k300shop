@@ -91,5 +91,20 @@ namespace K300.Controllers
                 throw ex;
             }
         }
+        [HttpGet("search-brand")]
+        public async Task<IActionResult> SearchBrand(string name)
+        {
+            try
+            {
+                Brand brand = new Brand();
+                brand.Name = name;
+                var result = await _brandService.SearchBrand(brand);
+                return Ok(result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

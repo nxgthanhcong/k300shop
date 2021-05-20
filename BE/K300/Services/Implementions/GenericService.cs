@@ -67,5 +67,21 @@ namespace Services.Implementions
                 throw ex;
             }
         }
+        public async Task<IEnumerable<T>> SearchBrand(Brand brand)
+        {
+            try
+            {
+                using (IUnitOfWork<T> uow = new UnitOfWork<T>(_connectionString))
+                {
+                    var result = await uow.GenericRepository.SearchBrand(brand);
+                    uow.Commit();
+                    return result;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

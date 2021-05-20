@@ -65,5 +65,20 @@ namespace Repository.Implementions
                 throw ex;
             }
         }
+        public async Task<IEnumerable<T>> SearchBrand(Brand brand)
+        {
+            try
+            {
+                var result = await QueryAsync<T>("[sp_SearchBrand]", new
+                {
+                    @name = brand.Name,
+                });
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
