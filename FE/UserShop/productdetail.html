@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./asset/css/grid.css">
+    <link rel="stylesheet" href="./asset/css/mylib.css">
+    <link rel="stylesheet" href="./asset/css/app.css">
+    <link rel="stylesheet" href="./asset/themify-icons/themify-icons.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="./asset/js/include.js"></script>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            
+        </div>
+        <div class="main">
+            <div class="wrap-detail-page">
+                <div id="scrolltop"></div>
+                <div class="detail-top">
+                    <div class="grid detail-top__wide">
+                        <div class="row">
+                            <div class="col l-1 small-live-show">
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1098_0c00dbbdbe484863afe38acf549e48d8_master.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1084_6289fef3ee4c466e87b6893b4fdbf0b6_master.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/size_guide_-_3_hundred_d1e315fead004f22a16b2acc6af07595_master.jpg" style="width:100%" onclick="currentSlide(3)" alt="Cinque Terre">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1085_006a9405754b483b9c6043d27753a5da_master.jpg" style="width:100%" onclick="currentSlide(4)" alt="Cinque Terre">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1061_2bd2eca9e8074de183d297517e8f93eb_master.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cinque Terre">
+                                </div>
+                                <div class="column">
+                                    <img class="demo cursor" src="https://product.hstatic.net/1000042622/product/img_1073_e9b31c8299b54e43a787e0225a3cefd6_master.jpg" style="width:100%" onclick="currentSlide(6)" alt="Cinque Terre">
+                                </div>
+                            </div>
+                            <div class="col l-5">
+                                <div class="container">
+                                    <div class="mySlides2">
+                                    <div class="numbertext"></div>
+                                    <img src="https://product.hstatic.net/1000042622/product/img_1098_0c00dbbdbe484863afe38acf549e48d8_master.jpg" style="width:100%">
+                                    </div>
+                                    <div class="mySlides2">
+                                        <div class="numbertext"></div>
+                                        <img src="https://product.hstatic.net/1000042622/product/img_1084_6289fef3ee4c466e87b6893b4fdbf0b6_master.jpg" style="width:100%">
+                                    </div>
+                                    
+                                    <div class="mySlides2">
+                                        <div class="numbertext"></div>
+                                        <img src="https://product.hstatic.net/1000042622/product/size_guide_-_3_hundred_d1e315fead004f22a16b2acc6af07595_master.jpg" style="width:100%">
+                                    </div>
+                                    <div class="mySlides2">
+                                        <div class="numbertext"></div>
+                                        <img src="https://product.hstatic.net/1000042622/product/img_1085_006a9405754b483b9c6043d27753a5da_master.jpg" style="width:100%">
+                                    </div>
+                                    <div class="mySlides2">
+                                        <div class="numbertext"></div>
+                                        <img src="https://product.hstatic.net/1000042622/product/img_1061_2bd2eca9e8074de183d297517e8f93eb_master.jpg" style="width:100%">
+                                    </div>
+                                    <div class="mySlides2">
+                                        <div class="numbertext"></div>
+                                        <img src="https://product.hstatic.net/1000042622/product/img_1073_e9b31c8299b54e43a787e0225a3cefd6_master.jpg" style="width:100%">
+                                    </div>
+                                    <a class="prev" onclick="plusSlides(-1)">❮</a>
+                                    <a class="next" onclick="plusSlides(1)">❯</a>
+                                </div>
+                            </div>
+                            <script>
+                                var slideIndex = 1;
+                                showSlides(slideIndex);
+                                
+                                function plusSlides(n) {
+                                showSlides(slideIndex += n);
+                                }
+                                
+                                function currentSlide(n) {
+                                showSlides(slideIndex = n);
+                                }
+                                
+                                function showSlides(n) {
+                                var i;
+                                var slides = document.getElementsByClassName("mySlides2");
+                                var dots = document.getElementsByClassName("demo");
+                                
+                                if (n > slides.length) {slideIndex = 1}
+                                if (n < 1) {slideIndex = slides.length}
+                                for (i = 0; i < slides.length; i++) {
+                                    slides[i].style.display = "none";
+                                }
+                                for (i = 0; i < dots.length; i++) {
+                                    dots[i].className = dots[i].className.replace(" active", "");
+                                }
+                                slides[slideIndex-1].style.display = "block";
+                            
+                                }
+                            </script>
+                            <div class="col l-4">
+                                <div class="dproduct">
+                                    <h1 class="dproduct__name">
+                                        Champion Graphic Big Logo T-Shirt In Black
+                                    </h1>
+                                    <p class="dproduct__price">350.000 vnđ</p>
+                                    <div class="dproduct__brand-cate-code">
+                                        <p class="dproduct__brand">Thương hiệu: AAPE</p>
+                                        <p class="dproduct__cate">Loại: T-SHIRTS</p>
+                                        <p class="dproduct__code">MSP: ABCXYZ</p>
+                                    </div>
+                                    <div class="dproduct__size">
+                                        <h2 class="dproduct__size-label">SIZE: </h2>
+                                        <ul class="dproduct__size-list">
+                                            <li class="dproduct__size-item dproduct__size-item--active">L</li>
+                                            <li class="dproduct__size-item">S</li>
+                                            <li class="dproduct__size-item">M</li>
+                                            <li class="dproduct__size-item">XL</li>
+                                            <li class="dproduct__size-item">XXL</li>
+                                        </ul>
+                                    </div>
+                                    <div class="dproduct__color">
+                                        <h2 class="dproduct__color-label">Màu sắc: </h2>
+                                        <span class="dproduct__color-item dproduct__color-item--active">Black</span>
+                                    </div>
+                                    <div class="dproduct__quantity">
+                                        <h2 class="dproduct__quantity-label">Số lượng: </h2>
+                                        <ul class="dproduct__quantity-list">
+                                            <li class="dproduct__quantity-item">-</li>
+                                            <li class="dproduct__quantity-item">1</li>
+                                            <li class="dproduct__quantity-item">+</li>
+                                        </ul>
+                                        <span class="dproduct__quantity-availabel btn--primary">Hiện còn: 3</span>
+                                    </div>
+                                    <button class="dproduct__add-to-cart btn--primary">Thêm vào giỏ</button>
+                                    <button class="dproduct__buy-now btn">Mua ngay</button>
+                                </div>
+                            </div>
+                        <div class="col l-2">
+
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-bot">
+                    <span class="btn--primary btn-detail">Chi tiết sản phẩm</span>
+                    <table style="width: 100%; border-collapse: collapse;" border="1px">
+                        <tbody style="vertical-align: top; ">
+                            <tr>
+                                <td>
+                                    <p>THÔNG TIN</p>
+                                    Cổ Tròn</br>
+                                    Tay Ngắn</br>
+                                    Vạt Ngang</br>
+                                    Hình In Trước</br>
+                                </td>
+                                <td>
+                                    <p>THƯƠNG HIỆU</p>
+                                    Từ đầu năm 2016, THE K300 bắt đầu cho ra những sản phẩm made in Vietnam mang xu
+                                    hướng mới mẻ cùng chất lượng tốt nhất và được bán trên toàn quốc.</br>
+
+                                    Các sản phẩm của THE K300 hầu như được lấy cảm hứng từ văn hóa thời trang đường
+                                    phố, tự do hoặc mang hơi hướng retro.</br>
+                                </td>
+                                <td>
+                                    <p>MODEL & SIZE</p>
+                                    Model's: 60kg/  175cm</br>
+                                    Size: XL</br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>CHẤT LIỆU</p>
+                                    100% Cotton
+                                </td>
+                                <td>
+
+                                </td>
+                                <td>
+                                    MÃ SẢN PHẨM
+T2105
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <style>
+                        table {
+                            border: 1px rgba(0, 0, 0, 0.1);
+                        }
+                        table tbody tr td {
+                            font-size: 1.4rem;
+                            padding: 14px;
+                            line-height: 3rem;
+                        }
+                        table tbody tr td p {
+                            font-size: 1.6rem;
+                            font-weight: 700;
+                            margin: 10px 0;
+                        }
+                    </style>
+                </div>
+                <div class="detail-relate">
+                    <h1>Sản phẩm liên quan</h1>
+                    <div class="grid wide relate-wrap">
+                        <div class="row">
+                            <div class="col l-4">
+                                <a style="display: block;" href="" class="relate__item">
+                                    <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                    <div class="relate__content">
+                                        <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                        <p>Mã sản phẩm: AT527-L</p>
+                                        <p>300 vnđ</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-4">
+                                <a style="display: block;" href="" class="relate__item">
+                                    <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                    <div class="relate__content">
+                                        <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                        <p>Mã sản phẩm: AT527-L</p>
+                                        <p>300 vnđ</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col l-4">
+                                <a style="display: block;" href="" class="relate__item">
+                                    <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                    <div class="relate__content">
+                                        <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                        <p>Mã sản phẩm: AT527-L</p>
+                                        <p>300 vnđ</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="detail-saw">
+                    <h1>Sản phẩm đã xem</h1>
+                    <div class="grid wide saw-wrap">
+                        <div class="row">
+                            <div class="col l-3 saw__item">
+                                <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                <div class="saw__content">
+                                    <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                    <p>Mã sản phẩm: AT527-L</p>
+                                    <p>300 vnđ</p>
+                                </div>
+                            </div>
+                            <div class="col l-3 saw__item">
+                                <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                <div class="saw__content">
+                                    <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                    <p>Mã sản phẩm: AT527-L</p>
+                                    <p>300 vnđ</p>
+                                </div>
+                            </div>
+                            <div class="col l-3 saw__item">
+                                <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                <div class="saw__content">
+                                    <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                    <p>Mã sản phẩm: AT527-L</p>
+                                    <p>300 vnđ</p>
+                                </div>
+                            </div>
+                            <div class="col l-3 saw__item">
+                                <img src="https://product.hstatic.net/1000042622/product/ai4a0805_6345223f887a4159a29c2bf86d149ca0_master.jpg" alt="">
+                                <div class="saw__content">
+                                    <h1>CHAMPION GRAPHIC LOGO T-SHIRT IN RED</h1>
+                                    <p>Mã sản phẩm: AT527-L</p>
+                                    <p>300 vnđ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-and-chat">
+            
+        </div>
+        <div class="footer">
+            
+        </div>
+    </div>
+
+
+</body>
+</html>
